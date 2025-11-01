@@ -40,6 +40,7 @@ public class RsDriversCode {
 
 //    ChromeDriver driver = new ChromeDriver();
 // we can use this as well but it is not recommended because it is not an interface and it uses chromedrivers method which might not be understandable to other drivers like firefox or edge so we implement the WebDriver interface instead.
+        // so webdriver all method only be accessible across all browser instances.
         WebDriver driver = new ChromeDriver(options);
 
 

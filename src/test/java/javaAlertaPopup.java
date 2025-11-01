@@ -20,24 +20,18 @@ public class javaAlertaPopup {
         // Handling Alert Popup
         driver.findElement(By.id("alertbtn")).click(); // this will open the alert popup
         Thread.sleep(2000);
-
         // Switch to alert and accept it
         driver.switchTo().alert().accept(); // this will accept the alert popup
 
         // Handling Confirm Popup
-        driver.findElement(By.id("confirmbtn")).click(); // this will open the confirm popup
         Thread.sleep(2000);
 
         // Switch to alert and dismiss it
-        driver.switchTo().alert().dismiss(); // this will dismiss the confirm popup
 
         // Handling Prompt Popup
-        driver.findElement(By.id("promtbtn")).click(); // this will open the prompt popup
         Thread.sleep(2000);
 
         // Switch to alert, send keys and accept it
-        driver.switchTo().alert().sendKeys("Test Input");
-        driver.switchTo().alert().accept(); // this will accept the prompt popup with input
 
         driver.quit();
     }

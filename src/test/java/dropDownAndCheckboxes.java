@@ -67,7 +67,6 @@ public class dropDownAndCheckboxes {
                     break; // we can break the loop after finding the option we want to select
                 }
             }
-
 //------------------------------------------------Checkbox-----And Radio-----//
 
         //we can use click method to select the checkbox, and isSelected() method to check if the checkbox is selected or not
