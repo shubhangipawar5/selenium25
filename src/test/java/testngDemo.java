@@ -4,11 +4,18 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-
+//in testng default test execution order is alphbetic order
 public class testngDemo {
     WebDriver driver;
     //we need to write main method here while working with TestNg
-
+    @BeforeSuite   //to setup global environments
+    public void setUp() {
+        System.out.println("Before suite");
+    }
+    @AfterSuite
+    public void tearDownSuite() {
+        System.out.println("After suite");
+    }
     @BeforeMethod
     public void prerequisite() throws InterruptedException {
         driver = new ChromeDriver();
@@ -32,15 +39,24 @@ public class testngDemo {
         System.out.println("Hello testing case 1");
 
     }
-    @Test
+    @BeforeTest      //this will set priority to this test case , befora all test cases in que this test case will trigger
     public void case_two(){
-        System.out.println("Hello testing case 2");
+        System.out.println("i will execute first");   //
+        /*
+        @BeforeTest
+
+Runs before any <test> tag in your TestNG XML.
+
+Executed once per <test> (not per class or method).
+
+Typically used for setup that applies to a group of classes in that <test> block.
+         */
 
     }
 
-    @Test
+    @AfterTest    //Runs after all test methods in a <test> tag are finished.
     public void case_three(){
-        System.out.println("Hello testing case 3");
+        System.out.println("i will execute last"); //to delete the coockies
     }
 
     @Test

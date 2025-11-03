@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelTests" parallel="classes" thread-count="2">
+ <parameter name="URL" value="personalloan.com"/>    <!-- suit level parameterisation /folder level-->
+    <!--  this will apply this url across your packge -->
+    <test name="Sanity">
+        <parameter name="API" value="amazon.com"/>    <!-- test level parameterisation /folder level-->
+        <parameter name="browser" value="chrome"></parameter>
+        <groups>                          <!--we can have many test cases in a group like smoke,sanity-->
+            <run>
+<!--                <include name ="sanity"/>-->
+            </run>
+        </groups>
+        <classes>
+            <class name="testngdemo3"/>
+
+        </classes>
+    </test>
+
+</suite>

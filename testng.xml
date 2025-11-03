@@ -6,7 +6,7 @@
     <test name="SmokeTests">
         <classes>
             <class name="testngDemo"/>
-<!--            <class name="tests.DashboardTest"/>&ndash;&gt;-->
+            <class name="testngdemo3"/>
         </classes>
     </test>
 
