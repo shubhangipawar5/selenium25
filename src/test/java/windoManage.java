@@ -63,4 +63,5 @@ public class windoManage {
         String parentId = winIds.iterator().next(); //iterates set and gives windows id with help of next method String childId = winIds.iterator().next(); System.out.println(winIds);
          */
     }
+
 }

@@ -19,6 +19,7 @@ public class frames {
         //take a screenshot of an element -
         // https://www.selenium.dev/documentation/webdriver/interactions/windows/
         //https://www.toolsqa.com/selenium-webdriver/screenshot-in-selenium/
+        //we have to cast a driver object to take screnshot method for whole page screenshot
         WebElement element = driver.findElement(By.xpath("//img[@class=\"logoClass\"]"));
         File scrFile = element.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("./image.png"));
@@ -41,5 +42,12 @@ public class frames {
 
 
         driver.quit();
+         /*
+    //GEt Height & Width
+
+System.out.println(name.getRect().getDimension().getHeight());
+
+System.out.println(name.getRect().getDimension().getWidth());
+     */
     }
 }

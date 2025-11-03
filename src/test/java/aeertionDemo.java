@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.Assertion;
+import org.testng.asserts.SoftAssert;
 
 
 import java.time.Duration;
@@ -62,6 +63,10 @@ public class aeertionDemo {
        }
 
 
+       //soft assert
+       SoftAssert a = new SoftAssert();
+//       a.assertEquals(actual,expected);
+//execution does not stop- it will store all failures and if u want to assert all and fail script can do  with - a.assertall() at the end of the script
 //       drivever.close();
     }
 }

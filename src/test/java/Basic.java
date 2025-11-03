@@ -14,6 +14,10 @@ public class Basic {
         //webdriver.edge.driver  for the ms edge driver
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();    // to maximize the window
+        //coockies
+        driver.manage().deleteAllCookies();
+        //if we have to delete session cookies we can do with
+//        driver.manage().deleteCookieNamed("JSESSIONID");
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");   //this has inbuilt wait of 5 seconds no need to wait till the page loads
 //       // driver.navigate().to("https://rahulshettyacademy.com/AutomationPractice/"); // this has no inbuilt wait so it will not wait till the page loads we have to explicitly wait if needed also if we have to navigate internally to another page we can use this method  ex- driver.navigate().to("facebook.com");
         Thread.sleep(2000);

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FullAutomationSuite" parallel="false" thread-count="2">
+
+    <!-- First group of tests -->
+    <test name="SmokeTests">
+        <classes>
+            <class name="testngDemo"/>
+<!--            <class name="tests.DashboardTest"/>&ndash;&gt;-->
+        </classes>
+    </test>
+
+    <!-- Second group of tests -->
+    <test name="RegressionTests">
+        <classes>
+            <class name="testngDemo2">   <!--//not closing class here , can close after exclude methods tag -->
+            <!--we can include or exclude test cases as per client needs and make separate xml file as per client needs -->
+                   <methods>
+                       <exclude name="case_xuv"></exclude>
+            <!-- exclude all 90 test cases  which has common name/startwith smae name / below it will exclude all cases startswith given name using reg. expressions-->
+                       <exclude name="case.*"></exclude>
+            <!--
+            <exclude name="*xuv"/>   ? ends with
+            <exclude name="*xuv*"/>    ?contains with
+            //run all cases from thespecific package/folder in java
+            <packages>
+            <package name="test"/>
+            </packages>
+            -->
+                   </methods>
+                </class>
+    <!--            <class name="tests.ProfileTest"/>-->
+        </classes>
+    </test>
+
+</suite>

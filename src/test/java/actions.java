@@ -50,5 +50,41 @@ public class actions {
        actions.scrollToElement(driver.findElement(By.xpath("//a[@aria-label=\"Amazon US Home\"]"))).perform();
 
 //        actions.scrollToElement(driver.findElement(By.xpath("//a[@aria-label=\"Amazon US Home\"]"))).perform();
+
+
+        //keyboard actions
+        // how to open the each link in the separate new tab without coming back to main page- so we are using chords here
+        // String clickonLink = Keys.chord(Keys.CONTROL, keys.ENTER
+        //driver.findelement(By.xpath("element")).sendkeys(clickonLink)
+
+        /*
+        Example 1: Copy Text (Ctrl + A, Ctrl + C)
+WebElement input = driver.findElement(By.id("textbox"));
+input.sendKeys("Hello Selenium!");
+
+// Select all text (Ctrl + A)
+input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+
+// Copy text (Ctrl + C)
+input.sendKeys(Keys.chord(Keys.CONTROL, "c"));
+
+✅ Example 2: Paste Text (Ctrl + V)
+WebElement input2 = driver.findElement(By.id("textbox2"));
+input2.sendKeys(Keys.chord(Keys.CONTROL, "v"));
+
+✅ Example 3: Shift + Enter (for newline in chat box)
+WebElement messageBox = driver.findElement(By.id("message"));
+messageBox.sendKeys("This is line 1");
+messageBox.sendKeys(Keys.chord(Keys.SHIFT, Keys.ENTER));
+messageBox.sendKeys("This is line 2");
+
+
+This mimics pressing Shift + Enter (often used in messaging apps to add a newline).
+
+✅ Example 4: Select and Delete All Text
+WebElement input = driver.findElement(By.id("username"));
+input.sendKeys(Keys.chord(Keys.CONTROL, "a")); // select all
+input.sendKeys(Keys.DELETE);
+         */
     }
 }
