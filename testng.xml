@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="FullAutomationSuite" parallel="false" thread-count="2">
-
+<suite name="FullAutomationSuite" parallel="tests" thread-count="2">
+  <!--thread cont means number of given tred count which allows to run the methods from the test->classfrom xml-here we have given 2 then 2 methods parallely from this test->class file will execute -->
     <!-- First group of tests -->
     <test name="SmokeTests">
         <classes>
