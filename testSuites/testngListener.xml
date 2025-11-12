@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomationSuite">
+
+    <listeners>
+        <!-- Listener class full package name -->
+        <listener class-name="TestComponenets.testngListeners"/>
+    </listeners>
+
+    <test name="RegressionTests">
+        <classes>
+            <!-- List all your test classes here -->
+            <class name="e2e.extentReports"/>
+        </classes>
+    </test>
+
+</suite>

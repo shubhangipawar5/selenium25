@@ -11,9 +11,7 @@ import pageobjects.landingaPage;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.HashMap;
@@ -79,11 +77,12 @@ public class BaseTest {
     }
 
 
-    public void getScreenShot() throws IOException {
-      TakesScreenshot ss = (TakesScreenshot)driver;
-      File source = ss.getScreenshotAs(OutputType.FILE);
-      File myfile = new File(System.getProperty("user.dir")+"/Screenshots/screenshot"+System.currentTimeMillis()+".png");
-       FileUtils.copyFile(source,myfile);
+    public String getScreenShot(String methodName) throws IOException {
+        TakesScreenshot ss = (TakesScreenshot) driver;
+        File source = ss.getScreenshotAs(OutputType.FILE);
+        File myfile = new File(System.getProperty("user.dir") + "/Screenshots/screenshot" + System.currentTimeMillis() + ".png");
+        FileUtils.copyFile(source, myfile);
+        return System.getProperty("user.dir") + "/Screenshots/screenshot" + methodName + ".png";   //returning for testNG listners
     }
 
     public void tearDown() {
@@ -92,3 +91,13 @@ public class BaseTest {
         }
     }
 }
+    /*
+    | Aspect         | `System.getProperty("browser")` | `prop.getProperty("browser")` |
+| -------------- | ------------------------------- | ----------------------------- |
+| Source         | JVM system properties           | Custom `Properties` object    |
+| Typical source | `-D` arguments, OS environment  | `.properties` file            |
+| Lifetime       | Global (for entire JVM)         | Local (for that object)       |
+| Setup required | None (built-in)                 | Must load or set manually     |
+| Common use     | Environment configs             | Application configs           |
+
+     */
