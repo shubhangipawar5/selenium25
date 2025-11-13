@@ -5,3 +5,12 @@ https://www.naukri.com/code360/library/selenium-interview-questions
 https://www.guvi.in/blog/selenium-interview-questions-and-answers/
 https://www.testleaf.com/blog/2025-top-automation-testing-infosys-interview-questions-with-expert-answers-from-testleaf-for-2-to-5-years-experience/
 https://www.interviewbit.com/selenium-interview-questions/
+
+
+
+//Data drive from Excel - we nee d an "Apache POI PAI" to retrieve data from the Excel.
+
+
+jars from maven -add to pom.xml>  /https://mvnrepository.com/artifact/org.apache.poi/poi
+AND
+https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml/5.4.1

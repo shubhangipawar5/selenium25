@@ -18,6 +18,7 @@ import java.util.List;
 //https://www.geeksforgeeks.org/software-engineering/assertion-in-selenium-webdriver-using-testng/
 //https://www.browserstack.com/guide/verify-and-assert-in-selenium
 //https://testgrid.io/blog/assert-vs-verify-in-selenium/
+//AutoIT - https://toolsqa.com/selenium-webdriver/autoit-selenium-webdriver/
 public class aeertionDemo {
    public static void main(String[] args) throws InterruptedException {
        //validate attributes
